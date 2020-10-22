@@ -1,4 +1,4 @@
-package main
+package stack
 
 import (
 	"container/list"
@@ -73,18 +73,3 @@ func (this *MyStack) Empty() bool {
  * param_3 := obj.Top();
  * param_4 := obj.Empty();
  */
-func main() {
-	obj := Constructor()
-	obj.Push(1)
-	obj.Push(2)
-	fmt.Println("top:", obj.Top())
-	fmt.Println("pop:", obj.Pop())
-	fmt.Println("pop:", obj.Pop())
-	fmt.Println("pop:", obj.Pop())
-
-	fmt.Println("empty:", obj.Empty())
-	obj.Push(3)
-	fmt.Println("top:", obj.Top())
-	fmt.Println("pop:", obj.Pop())
-
-}

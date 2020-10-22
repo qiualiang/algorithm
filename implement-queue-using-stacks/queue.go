@@ -1,8 +1,4 @@
-package main
-
-import (
-	"fmt"
-)
+package queue
 
 type MyQueue struct {
 	input  []int
@@ -69,15 +65,3 @@ func (this *MyQueue) Empty() bool {
  * param_3 := obj.Peek();
  * param_4 := obj.Empty();
  */
-func main() {
-	queue := Constructor()
-	queue.Push(1)
-	queue.Push(2)
-	fmt.Println(queue.Peek())
-	fmt.Println(queue.Pop())
-	fmt.Println(queue.Empty())
-	fmt.Println(queue.Pop())
-	fmt.Println("empty?", queue.Empty())
-	fmt.Println(queue.Peek())
-	fmt.Println(queue.Pop())
-}

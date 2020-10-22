@@ -1,4 +1,4 @@
-package main
+package reverselist
 
 import (
 	"fmt"
@@ -25,7 +25,7 @@ func ReverseList(head *ListNode) *ListNode {
  * 3. 通过m的值确定头插法的头节点位置
  * 4. 通过n-m的值确定执行几次头插操作
  */
-func reverseBetween(head *ListNode, m int, n int) *ListNode {
+func ReverseBetween(head *ListNode, m int, n int) *ListNode {
 	if head == nil || m >= n {
 		return head
 	}
@@ -50,7 +50,7 @@ func reverseBetween(head *ListNode, m int, n int) *ListNode {
 	return dummyhead.Next
 
 }
-func reverseKGroup(head *ListNode, k int) *ListNode {
+func ReverseKGroup(head *ListNode, k int) *ListNode {
 	if head == nil || k <= 0 {
 		return head
 	}
@@ -122,7 +122,7 @@ func main() {
 	// 	rev2 = rev2.Next
 	// }
 	fmt.Println("\nAfter reverse:")
-	rev := reverseKGroup(head, 2)
+	rev := ReverseKGroup(head, 2)
 
 	for rev != nil {
 		fmt.Printf("%d ", rev.Val)
