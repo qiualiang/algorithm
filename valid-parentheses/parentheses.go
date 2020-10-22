@@ -1,10 +1,6 @@
-package main
+package parentheses
 
-import (
-	"fmt"
-)
-
-func isValid(s string) bool {
+func IsValid(s string) bool {
 	n := len(s)
 	if n%2 == 1 {
 		return false
@@ -26,8 +22,4 @@ func isValid(s string) bool {
 		}
 	}
 	return len(stack) == 0
-}
-func main() {
-	s := "{{}}(())"
-	fmt.Println(isValid(s))
 }

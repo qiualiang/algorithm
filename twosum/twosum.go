@@ -1,10 +1,6 @@
-package main
+package twosum
 
-import (
-	"fmt"
-)
-
-func twoSum(nums []int, target int) []int {
+func TwoSum(nums []int, target int) []int {
 	numMap := make(map[int]int, len(nums))
 
 	for i, v := range nums {
@@ -15,12 +11,4 @@ func twoSum(nums []int, target int) []int {
 	}
 	return nil
 }
-func main() {
-	nums := []int{2, 7, 11, 15}
-	target := 9
-	if result := twoSum(nums, target); result != nil {
-		fmt.Println(result)
-	} else {
-		fmt.Println("Could not find the solution.")
-	}
-}
+

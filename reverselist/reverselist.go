@@ -1,9 +1,5 @@
 package reverselist
 
-import (
-	"fmt"
-)
-
 type ListNode struct {
 	Val  int
 	Next *ListNode
@@ -85,48 +81,4 @@ func myReverse(head, tail *ListNode) (*ListNode, *ListNode) {
 	}
 	p.Next = nex
 	return cur, p
-}
-func main() {
-	head := &ListNode{Val: 1}
-	n2 := &ListNode{Val: 2}
-	n3 := &ListNode{Val: 3}
-	n4 := &ListNode{Val: 4}
-	n5 := &ListNode{Val: 5}
-	n6 := &ListNode{Val: 6}
-	n7 := &ListNode{Val: 7}
-	head.Next = n2
-	n2.Next = n3
-	n3.Next = n4
-	n4.Next = n5
-	n5.Next = n6
-	n6.Next = n7
-	tmp := head
-	fmt.Println("Befor reverse:")
-	for tmp != nil {
-
-		fmt.Printf("%d ", tmp.Val)
-
-		tmp = tmp.Next
-	}
-	// fmt.Println("\nAfter reverse:")
-	// rev := ReverseList(head)
-
-	// for rev != nil {
-	// 	fmt.Printf("%d ", rev.Val)
-	// 	rev = rev.Next
-	// }
-	// fmt.Println("\nReverse betwwen [2,4]")
-	// rev2 := reverseBetween(head, 2, 4)
-	// for rev2 != nil {
-	// 	fmt.Printf("%d ", rev2.Val)
-	// 	rev2 = rev2.Next
-	// }
-	fmt.Println("\nAfter reverse:")
-	rev := ReverseKGroup(head, 2)
-
-	for rev != nil {
-		fmt.Printf("%d ", rev.Val)
-		rev = rev.Next
-	}
-
 }
