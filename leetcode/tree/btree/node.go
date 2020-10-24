@@ -6,6 +6,10 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+/*
+root = [6,2,8,0,4,7,9,nil,nil,3,5]
+一层一层生成二叉树
+*/
 func BuildTree(nums []interface{}) *TreeNode {
 	var root *TreeNode
 	tree := createTree(root, nums, len(nums), 0)
