@@ -1,4 +1,4 @@
-package btree
+package tree
 
 type TreeNode struct {
 	Val   int
